@@ -131,3 +131,19 @@ public class HeloController {
 		mav.addObject("datalist", list);
 		return mav;
 	}
+
+	/**
+	 *
+	 * @fn 		public ModelAndView removecheck(ModelAndView mav)
+	 * 
+	 * @brief 	삭제 유무 확인페이지
+	 *
+	 * @author 	박범찬
+	 * @date 	2019-06-20
+	 *
+	 * @param 	mav ModelAndView
+	 *
+	 * @remark	findBy 를 이용한 조건검색 후 삭제 유무 확인페이지 출력
+	 *
+	 */
+
