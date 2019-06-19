@@ -26,7 +26,8 @@ public class MyDataMongo {
 	private int Amount;
 	private int Average;
 
-	public MyDataMongo(String name, String code, int Java, int SpringBoot, int DataBase) {
+	public MyDataMongo(String name, String code, int UI, int Culture, int Capstone, int Jquery, int Pass, int Mento, int Smart1, int Smart2
+			, int Jsp, int Linux) {
 
 		super();
 		this.name = name;
@@ -42,7 +43,7 @@ public class MyDataMongo {
 		this.Smart2 = Smart2;
 		this.Jsp = Jsp;
 		this.Linux = Linux;
-		this.Amount = Java + SpringBoot + DataBase;
+		this.Amount = UI + Culture + Capstone + Jquery + Pass + Mento + Smart1 + Smart2 + Jsp + Linux;
 		this.Average = Amount / 3;
 	}
 
