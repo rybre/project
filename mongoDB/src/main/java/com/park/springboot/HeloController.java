@@ -147,3 +147,64 @@ public class HeloController {
 	 *
 	 */
 
+	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+	public ModelAndView removecheck(@PathVariable("id") String id, ModelAndView mav) {
+		mav.setViewName("delete");
+		mav.addObject("title", "Delete Page");
+		mav.addObject("msg", "삭제 유무 확인");
+
+		List<MyDataMongo> list = repository.findById(id);
+		mav.addObject("datalist", list);
+		return mav;
+	}
+
+	/**
+	 *
+	 * @fn 		public ModelAndView remove(ModelAndView mav)
+	 * 
+	 * @brief 	데이터 삭제
+	 *
+	 * @author 	박범찬
+	 * @date 	2019-06-20
+	 *
+	 * @param 	mav ModelAndView
+	 *
+	 * @remark	deleteBy 를 이용한 데이터 조건삭제
+	 *
+	 */
+	
+	@RequestMapping(value = "/delete", method = RequestMethod.POST)
+	public ModelAndView remove(@RequestParam("id") String id, ModelAndView mav) {
+		repository.deleteById(id);
+		return new ModelAndView("redirect:/");
+	}
+
+	/**
+	 *
+	 * @fn 		public ModelAndView edit(ModelAndView mav)
+	 * 
+	 * @brief 	수정페이지
+	 *
+	 * @author 	박범찬
+	 * @date 	2019-06-20
+	 *
+	 * @param 	mav ModelAndView
+	 *
+	 * @remark	findBy를 이용해 조건에 충족되는 데이터를 List에 저장 후 화면에 표시
+	 *
+	 */
+	
+	@RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+	public ModelAndView edit(@PathVariable("id") String id, ModelAndView mav) {
+		
+		mav.setViewName("edit");
+		mav.addObject("title", "Edit Page");
+		mav.addObject("msg", "수정할 데이터를 입력해주세요.");
+		
+		List<MyDataMongo> list = repository.findById(id);
+		
+		mav.addObject("datalist", list);
+		return mav;
+	}
+
+	
