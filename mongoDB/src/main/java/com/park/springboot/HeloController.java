@@ -208,3 +208,47 @@ public class HeloController {
 	}
 
 	
+	/**
+	 *
+	 * @fn 		public ModelAndView editpost(ModelAndView mav)
+	 * 
+	 * @brief 	데이터 수정
+	 *
+	 * @author 	박범찬
+	 * @date 	2019-06-20
+	 *
+	 * @param 	mav ModelAndView
+	 *
+	 * @remark	폼에 입력된 값을 받아온 후 객체에 저장	
+	 *		   	save 메소드를 이용해 DB에 저장		
+	 *			deleteBy를 이용해 이전데이터 삭제	
+	 *
+	 */
+	
+	@RequestMapping(value = "/edit", method = RequestMethod.POST)
+	public ModelAndView editpost(
+			@RequestParam("id") String id, 
+			@RequestParam("code") String code, 
+			@RequestParam("name") String name,
+			@RequestParam("UI") int UI, 
+			@RequestParam("Culture") int Culture,
+			@RequestParam("Capstone") int Capstone, 
+			@RequestParam("Jquery") int Jquery, 
+			@RequestParam("Pass") int Pass,
+			@RequestParam("Mento") int Mento, 
+			@RequestParam("Smart1") int Smart1, 
+			@RequestParam("Smart2") int Smart2,
+			@RequestParam("Jsp") int Jsp, 
+			@RequestParam("Linux") int Linux,
+			
+			ModelAndView mov) 
+
+	{
+		MyDataMongo mydata = new MyDataMongo(name, code, UI, Culture, Capstone, Jquery, Pass, Mento, Smart1, Smart2, Jsp, Linux);
+		repository.save(mydata);
+		repository.deleteById(id);
+		
+		return new ModelAndView("redirect:/");
+	}
+
+}
