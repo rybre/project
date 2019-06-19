@@ -6,13 +6,12 @@ import org.springframework.data.annotation.Id;
 
 public class MyDataMongo {
 	@Id
-
+	
 	private String id;
 	
 	private String code;
 	private String name;
 	private Date date;
-	
 	private double UI;
 	private double Culture;
 	private double Capstone;
@@ -182,12 +181,12 @@ public class MyDataMongo {
 		Average = average;
 	}
 
-	public double getGradeAge() {
+	public double getGradeAvg() {
 		return GradeAvg;
 	}
 
-	public void setGradeAge(double GradeAge) {
-		Average = GradeAge;
+	public void setGradeAvg(double GradeAvg) {
+		Average = GradeAvg;
 	}
 
 }
