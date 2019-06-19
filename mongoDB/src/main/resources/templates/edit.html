@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>top page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+h1 {
+	font-size: 18pt;
+	font-weight: bold;
+	color: gray;
+}
+
+body {
+	font-size: 13pt;
+	color: gray;
+	margin: 5px 25px;
+}
+
+tr {
+	margin: 5px;
+}
+
+th {
+	padding: 5px;
+	color: white;
+	background: darkgray;
+}
+
+td {
+	padding: 5px;
+	color: black;
+	background: #e0e0ff;
+}
+
+table.navi {
+	width: 100%;
+	background: white;
+}
+
+table.navi tr {
+	background: white;
+}
+
+table.navi tr td {
+	background: white;
+}
+
+.err {
+	color: red;
+}
+</style>
+</head>
+<body>
+	<h1 th:text="#{content.title}">Helo page</h1>
+	<p th:text="${msg}"></p>
+	
+	<table th:each="obj : ${datalist}">
+		<form method="post" action="/edit">
+		<input type="hidden" name="id" th:value="*{id}" />
+			<tr>
+				<td><label for="name">이름</label></td>
+				<td><input type="text" name="name" /></td>
+			</tr>
+			<tr>
+				<td><label for="code">학번</label></td>
+				<td><input type="text" name="code" /></td>
+			</tr>
+			<tr>
+				<td><label for="UI">UI</label></td>
+				<td><input type="text" name="UI" /></td>
+			</tr>
+			<tr>
+				<td><label for="Culture">교양</label></td>
+				<td><input type="text" name="Culture" /></td>
+			</tr>
+			<tr>
+				<td><label for="Capstone">캡스톤디자인</label></td>
+				<td><input type="text" name="Capstone" /></td>
+			</tr>
+			<tr>
+				<td><label for="Jquery">Jquery</label></td>
+				<td><input type="text" name="Jquery" /></td>
+			</tr>
+			<tr>
+				<td><label for="Pass">전공패스</label></td>
+				<td><input type="text" name="Pass" /></td>
+			</tr>
+						<tr>
+				<td><label for="Mento">멘토링</label></td>
+				<td><input type="text" name="Mento" /></td>
+			</tr>
+						<tr>
+				<td><label for="Smart1">스마트 지식컨텐츠1</label></td>
+				<td><input type="text" name="Smart1" /></td>
+			</tr>
+						<tr>
+				<td><label for="Smart2">스마트 지식컨텐츠2</label></td>
+				<td><input type="text" name="Smart2" /></td>
+			</tr>
+						<tr>
+				<td><label for="Jsp">Jsp</label></td>
+				<td><input type="text" name="Jsp" /></td>
+			</tr>
+						<tr>
+				<td><label for="Linux">리눅스</label></td>
+				<td><input type="text" name="Linux" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" value = "수정"/>
+					</form>
+					<a th:href="@{'/'}"><button>취소</button></a>
+				</td>
+			</tr>
+
+		
+	</table>
+</body>
+</html>
