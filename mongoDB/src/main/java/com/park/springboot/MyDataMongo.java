@@ -28,11 +28,12 @@ public class MyDataMongo {
 	private double Average;
 	private double Result;
 	private double Result2;
+	private int Sum;
 	
 
 	public MyDataMongo(String name, String code, double UI, double Culture, double Capstone, double Jquery,
 			double Pass, double Mento, double Smart1, double Smart2
-			, double Jsp, double Linux) {
+			, double Jsp, double Linux, int Sum) {
 
 		super();
 		this.name = name;
@@ -194,7 +195,7 @@ public class MyDataMongo {
 	}
 
 	public void setGradeAvg(double GradeAvg) {
-		Average = GradeAvg;
+		GradeAvg = GradeAvg;
 	}
 	
 	public double getResult() {
@@ -217,8 +218,16 @@ public class MyDataMongo {
 		Average = GradeAvg2;
 	}
 	
-	public double getGradeAvg2() {
+	public double GradeAvg2() {
 		return GradeAvg2;
+	}
+	
+	public void setsum(double Sum) {
+		Sum = Sum;
+	}
+	
+	public double getSum() {
+		return Sum;
 	}
 
 }
