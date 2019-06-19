@@ -44,7 +44,7 @@ public class MyDataMongo {
 		this.Jsp = Jsp;
 		this.Linux = Linux;
 		this.Amount = UI + Culture + Capstone + Jquery + Pass + Mento + Smart1 + Smart2 + Jsp + Linux;
-		this.Average = Amount / 3;
+		this.Average = Amount / 10;
 	}
 
 
