@@ -59,51 +59,51 @@ table.navi tr td {
 		<input type="hidden" name="id" th:value="*{id}" />
 			<tr>
 				<td><label for="name">이름</label></td>
-				<td><input type="text" name="name" /></td>
+				<td><input type="text" name="name" th:value = "${obj.name}"></td>
 			</tr>
 			<tr>
 				<td><label for="code">학번</label></td>
-				<td><input type="text" name="code" /></td>
+				<td><input type="text" name="code" th:value = "${obj.code}"></td>
 			</tr>
 			<tr>
 				<td><label for="UI">UI</label></td>
-				<td><input type="text" name="UI" /></td>
+				<td><input type="text" name="UI" th:value = "${obj.UI}"></td>
 			</tr>
 			<tr>
 				<td><label for="Culture">교양</label></td>
-				<td><input type="text" name="Culture" /></td>
+				<td><input type="text" name="Culture" th:value = "${obj.Culture}"></td>
 			</tr>
 			<tr>
 				<td><label for="Capstone">캡스톤디자인</label></td>
-				<td><input type="text" name="Capstone" /></td>
+				<td><input type="text" name="Capstone" th:value = "${obj.Capstone}"></td>
 			</tr>
 			<tr>
 				<td><label for="Jquery">Jquery</label></td>
-				<td><input type="text" name="Jquery" /></td>
+				<td><input type="text" name="Jquery" th:value = "${obj.Jquery}"></td>
 			</tr>
 			<tr>
 				<td><label for="Pass">전공패스</label></td>
-				<td><input type="text" name="Pass" /></td>
+				<td><input type="text" name="Pass" th:value = "${obj.Pass}"></td>
 			</tr>
-						<tr>
+			<tr>
 				<td><label for="Mento">멘토링</label></td>
-				<td><input type="text" name="Mento" /></td>
+				<td><input type="text" name="Mento" th:value = "${obj.Mento}"></td>
 			</tr>
-						<tr>
-				<td><label for="Smart1">스마트 지식컨텐츠1</label></td>
-				<td><input type="text" name="Smart1" /></td>
+			<tr>
+				<td><label for="Smart1">스마트미디어 지식컨텐츠1</label></td>
+				<td><input type="text" name="Smart1" th:value = "${obj.Smart1}"></td>
 			</tr>
-						<tr>
-				<td><label for="Smart2">스마트 지식컨텐츠2</label></td>
-				<td><input type="text" name="Smart2" /></td>
+			<tr>
+				<td><label for="Smart2">스마트미디어 지식컨텐츠2</label></td>
+				<td><input type="text" name="Smart2" th:value = "${obj.Smart2}"></td>
 			</tr>
-						<tr>
+			<tr>
 				<td><label for="Jsp">Jsp</label></td>
-				<td><input type="text" name="Jsp" /></td>
+				<td><input type="text" name="Jsp" th:value = "${obj.Jsp}"></td>
 			</tr>
-						<tr>
-				<td><label for="Linux">리눅스</label></td>
-				<td><input type="text" name="Linux" /></td>
+			<tr>
+				<td><label for="Mento">리눅스</label></td>
+				<td><input type="text" name="Linux" th:value = "${obj.Linux}"></td>
 			</tr>
 			<tr>
 				<td></td>
