@@ -13,21 +13,22 @@ public class MyDataMongo {
 	private String name;
 	private Date date;
 	
-	private int UI;
-	private int Culture;
-	private int Capstone;
-	private int Jquery;
-	private int Pass;
-	private int Mento;
-	private int Smart1;
-	private int Smart2;
-	private int Jsp;
-	private int Linux;
-	private int Amount;
-	private int Average;
+	private double UI;
+	private double Culture;
+	private double Capstone;
+	private double Jquery;
+	private double Pass;
+	private double Mento;
+	private double Smart1;
+	private double Smart2;
+	private double Jsp;
+	private double Linux;
+	private double Amount;
+	private double Average;
 
-	public MyDataMongo(String name, String code, int UI, int Culture, int Capstone, int Jquery, int Pass, int Mento, int Smart1, int Smart2
-			, int Jsp, int Linux) {
+	public MyDataMongo(String name, String code, double UI, double Culture, double Capstone, double Jquery,
+			double Pass, double Mento, double Smart1, double Smart2
+			, double Jsp, double Linux) {
 
 		super();
 		this.name = name;
@@ -80,100 +81,100 @@ public class MyDataMongo {
 		this.date = date;
 	}
 	/**과목**/
-	public int getUI() {
+	public double getUI() {
 		return UI;
 	}
 
-	public void setUI(int UI) {
+	public void setUI(double UI) {
 		UI = UI;
 	}
 
-	public int getCulture() {
+	public double getCulture() {
 		return Culture;
 	}
 
-	public void setCulture(int Culture) {
+	public void setCulture(double Culture) {
 		Culture = Culture;
 	}
 
-	public int getCapstone() {
+	public double getCapstone() {
 		return Capstone;
 	}
 
-	public void setCapstone(int Capstone) {
+	public void setCapstone(double Capstone) {
 		Capstone = Capstone;
 	}
 	/**캡스톤 완료**/
-	public int getJquery() {
+	public double getJquery() {
 		return Jquery;
 	}
 
-	public void setJquery(int Jquery) {
+	public void setJquery(double Jquery) {
 		Jquery = Jquery;
 	}
 	
-	public int getPass() {
+	public double getPass() {
 		return Pass;
 	}
 
-	public void setPass(int Pass) {
+	public void setPass(double Pass) {
 		Pass = Pass;
 	}
 
-	public int getMento() {
+	public double getMento() {
 		return Mento;
 	}
 
-	public void setMento(int Mento) {
+	public void setMento(double Mento) {
 		Mento = Mento;
 	}
 	/**멘토링까지**/
-	public int getSmart1() {
+	public double getSmart1() {
 		return Smart1;
 	}
 
-	public void setSmart1(int Smart1) {
+	public void setSmart1(double Smart1) {
 		Smart1 = Smart1;
 	}
 	
-	public int getSmart2() {
+	public double getSmart2() {
 		return Smart2;
 	}
 
-	public void setSmart2(int Smart2) {
+	public void setSmart2(double Smart2) {
 		Smart2 = Smart2;
 	}
 	
-	public int getJsp() {
+	public double getJsp() {
 		return Jsp;
 	}
 
-	public void setJsp(int Jsp) {
+	public void setJsp(double Jsp) {
 		Jsp = Jsp;
 	}
 	/**자바까지**/
-	public int getLinux() {
+	public double getLinux() {
 		return Linux;
 	}
 
-	public void setLinux(int Linux) {
+	public void setLinux(double Linux) {
 		Linux = Linux;
 	}
 	
 	/**과목선언완료**/
-	public int getAmount() {
+	public double getAmount() {
 		return Amount;
 	}
 
-	public void setAmount(int amount) {
+	public void setAmount(double amount) {
 		Amount = amount;
 	}
 
-	public int getAverage() {
+	public double getAverage() {
 		return Average;
 	}
 
-	public void setAverage(int average) {
+	public void setAverage(double average) {
 		Average = average;
 	}
 
