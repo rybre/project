@@ -97,11 +97,10 @@ public class HeloController {
 			@RequestParam("Smart2") double Smart2,
 			@RequestParam("Jsp") double Jsp, 
 			@RequestParam("Linux") double Linux,
-			@RequestParam("Sum") int Sum,
 
 			ModelAndView mov) 
 	{
-		MyDataMongo mydata = new MyDataMongo(name, code, UI, Culture, Capstone, Jquery, Pass, Mento, Smart1, Smart2, Jsp, Linux, Sum);
+		MyDataMongo mydata = new MyDataMongo(name, code, UI, Culture, Capstone, Jquery, Pass, Mento, Smart1, Smart2, Jsp, Linux);
 		repository.save(mydata);
 		
 		return new ModelAndView("redirect:/");
@@ -241,12 +240,11 @@ public class HeloController {
 			@RequestParam("Smart2") double Smart2,
 			@RequestParam("Jsp") double Jsp, 
 			@RequestParam("Linux") double Linux,
-			@RequestParam("Sum") int Sum,
 			
 			ModelAndView mov) 
 
 	{
-		MyDataMongo mydata = new MyDataMongo(name, code, UI, Culture, Capstone, Jquery, Pass, Mento, Smart1, Smart2, Jsp, Linux, Sum);
+		MyDataMongo mydata = new MyDataMongo(name, code, UI, Culture, Capstone, Jquery, Pass, Mento, Smart1, Smart2, Jsp, Linux);
 		repository.save(mydata);
 		repository.deleteById(id);
 		
