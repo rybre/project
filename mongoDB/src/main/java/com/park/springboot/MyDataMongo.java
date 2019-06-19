@@ -46,8 +46,8 @@ public class MyDataMongo {
 		this.Jsp = Jsp;
 		this.Linux = Linux;
 		this.Amount = UI + Culture + Capstone + Jquery + Pass + Mento + Smart1 + Smart2 + Jsp + Linux;
-		this.GradeAvg = (UI * 2 + Culture * 2 + Capstone * 2 + Jquery * 2 + Pass + Mento * 1 + Smart1 * 3 + Smart2 * 3 +
-				Jsp * 3 + Linux * 2)/21; 
+		this.GradeAvg = (UI * 2) + (Culture * 2) + (Capstone * 2) + (Jquery * 2) + Pass + (Mento * 1) + (Smart1 * 3) + (Smart2 * 3) +
+				(Jsp * 3) + (Linux * 2)/21; 
 				
 		this.Average = Amount / 10;
 	}
