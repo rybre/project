@@ -26,6 +26,9 @@ public class MyDataMongo {
 	private double GradeAvg;
 	private double GradeAvg2;
 	private double Average;
+	private double Result;
+	private double Result2;
+	
 
 	public MyDataMongo(String name, String code, double UI, double Culture, double Capstone, double Jquery,
 			double Pass, double Mento, double Smart1, double Smart2
@@ -47,9 +50,11 @@ public class MyDataMongo {
 		this.Linux = Linux;
 		this.Amount = UI + Culture + Capstone + Jquery + Pass + Mento + Smart1 + Smart2 + Jsp + Linux;
 		this.GradeAvg = (UI * 2 + Capstone * 2 + Jquery * 2 + Pass + Mento * 1 + Smart1 * 3 + Smart2 * 3 +
-				Jsp * 3 + Linux * 2)/21;
+				Jsp * 3 + Linux * 2);
 		this.GradeAvg2 = (UI * 2 + Culture * 2 + Capstone * 2 + Jquery * 2 + Pass + Mento * 1 + Smart1 * 3 + Smart2 * 3 +
-				Jsp * 3 + Linux * 2)/23; 
+				Jsp * 3 + Linux * 2); 
+		this.Result = GradeAvg / 21;
+		this.Result2 = GradeAvg2 / 23;
 				
 		this.Average = Amount / 10;
 	}
@@ -192,12 +197,28 @@ public class MyDataMongo {
 		Average = GradeAvg;
 	}
 	
-	public double getGradeAvg2() {
-		return GradeAvg;
+	public double getResult() {
+		return Result;
+	}
+
+	public void setResult(double Result) {
+		Average = Result;
+	}
+	
+	public double getResult2() {
+		return Result2;
+	}
+
+	public void setResult2(double Result2) {
+		Average = Result2;
 	}
 
 	public void setGradeAvg2(double GradeAvg2) {
 		Average = GradeAvg2;
+	}
+	
+	public double getGradeAvg2() {
+		return GradeAvg2;
 	}
 
 }
