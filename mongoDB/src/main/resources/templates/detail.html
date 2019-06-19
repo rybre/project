@@ -58,54 +58,54 @@ table.navi tr td {
 	<table th:each="obj : ${datalist}">
 		<form method="post" action="/detail/{id}">
 			<input type="hidden" th:value="${obj.id}" />
-			<tr>
-				<td><label for="name">이름</label></td>
-				<td><input type="text" name="name" /></td>
-			</tr>
-			<tr>
-				<td><label for="code">학번</label></td>
-				<td><input type="text" name="code" /></td>
-			</tr>
-			<tr>
-				<td><label for="UI">UI</label></td>
-				<td><input type="text" name="UI" /></td>
-			</tr>
-			<tr>
-				<td><label for="Culture">교양</label></td>
-				<td><input type="text" name="Culture" /></td>
-			</tr>
-			<tr>
-				<td><label for="Capstone">캡스톤디자인</label></td>
-				<td><input type="text" name="Capstone" /></td>
-			</tr>
-			<tr>
-				<td><label for="Jquery">Jquery</label></td>
-				<td><input type="text" name="Jquery" /></td>
-			</tr>
-			<tr>
-				<td><label for="Pass">전공패스</label></td>
-				<td><input type="text" name="Pass" /></td>
-			</tr>
-						<tr>
-				<td><label for="Mento">멘토링</label></td>
-				<td><input type="text" name="Mento" /></td>
-			</tr>
-						<tr>
-				<td><label for="Smart1">스마트 지식컨텐츠1</label></td>
-				<td><input type="text" name="Smart1" /></td>
-			</tr>
-						<tr>
-				<td><label for="Smart2">스마트 지식컨텐츠2</label></td>
-				<td><input type="text" name="Smart2" /></td>
-			</tr>
-						<tr>
-				<td><label for="Jsp">Jsp</label></td>
-				<td><input type="text" name="Jsp" /></td>
-			</tr>
-						<tr>
-				<td><label for="Linux">리눅스</label></td>
-				<td><input type="text" name="Linux" /></td>
-			</tr>
+		<tr>
+			<td>이름</td>
+			<td th:text="${obj.name}"></td>
+		</tr>
+		<tr>
+			<td>학번</td>
+			<td th:text="${obj.code}"></td>
+		</tr>
+		<tr>
+			<td>UI</td>
+			<td th:text="${obj.UI}"></td>
+		</tr>
+		<tr>
+			<td>교양</td>
+			<td th:text="${obj.Culture}"></td>
+		</tr>
+		<tr>
+			<td>캡스톤디자인</td>
+			<td th:text="${obj.Capstone}"></td>
+		</tr>
+		<tr>
+			<td>Jquery</td>
+			<td th:text="${obj.Jquery}"></td>
+		</tr>
+		<tr>
+			<td>멘토링</td>
+			<td th:text="${obj.Mento}"></td>
+		</tr>
+		<tr>
+			<td>스마트미디어지식콘텐츠1</td>
+			<td th:text="${obj.Smart1}"></td>
+		</tr>
+		<tr>
+			<td>스마트미디어지식콘텐츠2</td>
+			<td th:text="${obj.Smart2}"></td>
+		</tr>
+		<tr>
+			<td>Jsp</td>
+			<td th:text="${obj.Jsp}"></td>
+		</tr>
+		<tr>
+			<td>평균</td>
+			<td th:text="${obj.Average}"></td>
+		</tr>
+		<tr>
+			<td>작성날짜</td>
+			<td th:text="${obj.date}"></td>
+		</tr>
 		</form>
 		<tr>
 			<td colspan="2">
